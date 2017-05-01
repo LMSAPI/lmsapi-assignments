@@ -91,7 +91,7 @@ def student_assignments(course, assignment):
         return 'Delete failed'
 
 
-@app.route('/assignments', methods=['POST'], defaults={'assignment': None})
+@app.route('/assignments', methods=['POST'], defaults={'course': None})
 @app.route('/assignments/<course>', methods=['GET', 'PUT', 'DELETE'])
 @require_appkey
 def assignments(course):
